@@ -10,8 +10,15 @@ typedef unsigned long long u64;
 #define global_variable static
 #define internal static
 
+inline float
+clamp(float min, float val, float max) {
+	if (val < min) return min;
+	if (val > max) return max;
+	return val;
+}
+
 inline int
-clamp(int min, int val, int max) {
+clamp_int(int min, int val, int max) {
 	if (val < min) return min;
 	if (val > max) return max;
 	return val;

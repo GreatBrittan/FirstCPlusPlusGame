@@ -9,6 +9,8 @@ enum {
 	BUTTON_LEFT,
 	BUTTON_RIGHT,
 
+	BUTTON_SPACEBAR,
+
 	BUTTON_COUNT, // Should be the last item
 };
 

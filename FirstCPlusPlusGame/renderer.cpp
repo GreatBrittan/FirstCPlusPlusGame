@@ -13,10 +13,10 @@ clear_screen(u32 color) {
 internal void
 draw_rect_in_pixels(int x0, int y0, int x1, int y1, u32 color) {
 
-	x0 = clamp(0, x0, render_state.width);
-	x1 = clamp(0, x1, render_state.width);
-	y0 = clamp(0, y0, render_state.height);
-	y1 = clamp(0, y1, render_state.height);
+	x0 = clamp_int(0, x0, render_state.width);
+	x1 = clamp_int(0, x1, render_state.width);
+	y0 = clamp_int(0, y0, render_state.height);
+	y1 = clamp_int(0, y1, render_state.height);
 
 
 	for (int y = y0; y < y1; y++) {
